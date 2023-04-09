@@ -31,11 +31,26 @@ header {
 }
 #changer {
     height: 100%;
-    width: 200px;
     background-color: #2E2E2E;
     border-radius: 4px;
     padding: 5px;
     display: inline-block;
+}
+
+@media screen and (max-width: 291px) {
+    #name {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 272px) {
+    #name {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 251px) {
+    #name {
+        font-size: 14px;
+    }
 }
 
 main {
