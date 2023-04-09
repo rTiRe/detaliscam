@@ -2,10 +2,14 @@ body {
     background-color: #1A1A1A;
     display: flex;
     justify-content: center;
+    color: #EEEEEE;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
 }
 .wrapper {
     width: 100%;
-    max-width: 1080px;
+    max-width: 768px;
     background-color: #1E1E1E;
 }
 
@@ -24,9 +28,6 @@ header {
 
 #name {
     font-size: 20px;
-    color: #FFFFFF;
-    font-family: Manrope;
-    font-weight: 500;
 }
 #changer {
     height: 100%;
@@ -35,4 +36,42 @@ header {
     border-radius: 4px;
     padding: 5px;
     display: inline-block;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 40px;
+}
+
+.alert {
+    width: 80%;
+    padding: 15px;
+    border: #EEEEEE 1px solid;
+    border-radius: 8px;
+    text-align: justify;
+    
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    margin: auto;
+    width: 220px;
+    height: 45px;
+    background-color: #2E2E2E;
+    border-radius: 8px;
+    border: #EEEEEE 1px solid;
+    color: #EEEEEE;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    transition: .15s;
+}
+button:hover {
+    box-shadow: 0 0 10px white;
 }
