@@ -11,6 +11,7 @@ body {
     width: 100%;
     max-width: 768px;
     background-color: #1E1E1E;
+    position: relative;
 }
 
 header {
@@ -21,6 +22,15 @@ header {
     grid-gap: 20px;
     align-items: center;
 }
+header > a, a:visited, a:active, a:hover {
+    height: 100%;
+    display: flex;
+    grid-gap: 20px;
+    align-items: center;
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
 
 #logo {
     height: 100%;
@@ -28,6 +38,7 @@ header {
 
 #name {
     font-size: 20px;
+    display: inline-block;
 }
 #changer {
     height: 100%;
@@ -79,7 +90,7 @@ main {
     text-align: center;
 }
 
-button {
+.buttons button {
     margin: auto;
     width: 220px;
     height: 45px;
@@ -92,6 +103,29 @@ button {
     font-weight: 500;
     transition: .15s;
 }
-button:hover {
+.buttons button:hover {
     box-shadow: 0 0 10px white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer button {
+    width: 100%;
+    height: 50px;
+    background-color: #2E2E2E;
+    color: #EEEEEE;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    transition: .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer button:hover {
+    background-color: #3D3D3D;
 }
