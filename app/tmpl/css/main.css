@@ -57,15 +57,24 @@ header > a, a:visited, a:active, a:hover {
     #name {
         font-size: 18px;
     }
+    #changer {
+        height: 28px;
+    }
 }
 @media screen and (max-width: 272px) {
     #name {
         font-size: 16px;
     }
+    #changer {
+        height: 25px;
+    }
 }
 @media screen and (max-width: 251px) {
     #name {
         font-size: 14px;
+    }
+    #changer {
+        height: 22px;
     }
 }
 
