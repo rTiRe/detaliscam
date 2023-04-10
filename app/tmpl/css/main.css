@@ -38,14 +38,19 @@ header > a, a:visited, a:active, a:hover {
 
 #name {
     font-size: 20px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    grid-gap: 10px;
 }
 #changer {
-    height: 100%;
+    width: 100%;
+    min-width: 100px;
+    height: 30px;
     background-color: #2E2E2E;
     border-radius: 4px;
     padding: 5px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 291px) {

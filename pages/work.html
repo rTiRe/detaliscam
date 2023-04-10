@@ -37,9 +37,7 @@
                 <img src="../app/tmpl/img/horse.png" alt="Восьминогий конь Одина - лого скамера" id="logo">
                 <div id="name">
                     Скам 
-                    <span id="changer">
-                        метаморфоза.
-                    </span>
+                    <span id="changer"></span>
                 </div>
             </a>
         </header>
@@ -50,5 +48,10 @@
             <a href="../"><button class="back"><i class="twa twa-backhand-index-pointing-left" style="font-size: 26px;"></i> Назад</button></a>
         </footer>
     </div>
+    <script src="app/libs/jquery.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#changer', {strings: ['детали.', 'накал.', 'кварцевание.', 'метаморфоза.'], typeSpeed: 40, backSpeed: 40, backDelay: 5000, startDelay: 100, loop: true, showCursor: false, shuffle: true});
+    </script>
 </body>
 </html>
