@@ -1,34 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
 body {
-    background-color: #1A1A1A;
-    display: flex;
+    background-color: #C5C7D0;
+    display: flex; 
     justify-content: center;
-    color: #EEEEEE;
+    color: #323338;
     font-size: 16px;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
 }
 .wrapper {
     width: 100%;
     max-width: 768px;
-    background-color: #1E1E1E;
+    background-color: #EEEEEE;
     position: relative;
 }
 
 header {
     width: 100%;
+    max-width: inherit;
     height: 60px;
     padding: 10px;
     display: flex;
     grid-gap: 20px;
+    justify-content: center;
     align-items: center;
+    position: fixed;
+    background-color: inherit;
+    box-shadow: 0 10px 5px -5px #EEEEEE;
+    overflow: hidden;
 }
-header > a, a:visited, a:active, a:hover {
+header a, header a:visited, header a:active, header a:hover {
     height: 100%;
     display: flex;
     grid-gap: 20px;
     align-items: center;
     text-decoration: none;
-    color: #EEEEEE;
+    color: #323338;
 }
 
 
@@ -37,109 +46,332 @@ header > a, a:visited, a:active, a:hover {
 }
 
 #name {
-    font-size: 20px;
+    font-size: 22px;
     display: inline-flex;
     align-items: center;
-    grid-gap: 10px;
+    padding: 2px 5px 4px 5px;;
+    border-radius: 6px;
+    border: #323338 solid 2px;
 }
-#changer {
-    width: 100%;
-    min-width: 100px;
-    height: 30px;
-    background-color: #2E2E2E;
-    border-radius: 4px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-}
+
 
 @media screen and (max-width: 291px) {
     #name {
         font-size: 18px;
-    }
-    #changer {
-        height: 28px;
     }
 }
 @media screen and (max-width: 272px) {
     #name {
         font-size: 16px;
     }
-    #changer {
-        height: 25px;
-    }
 }
 @media screen and (max-width: 251px) {
     #name {
         font-size: 14px;
     }
-    #changer {
-        height: 22px;
-    }
 }
 
 main {
-    padding: 20px;
+    padding: 15px 20px 120px 20px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
-    grid-gap: 40px;
+    margin-top: 60px;
+}
+
+.left-menu {
+    display: inline-block;
+    background-color: transparent;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    left: -200px;
+    top: 0;
+    padding: 60px 0;
+}
+
+.left-menu .buttons svg {
+    position: relative;
+    min-width: 30px;
+    max-width: 30px;
+}
+.left-menu .buttons a {
+    width: auto;
+    height: auto;
+    max-height: 50px;
+    display: inline-flex;
+    font-size: 14px;
+    align-items: center;
+    gap: 5px;
+}
+.left-menu .buttons a.purple {
+    background-color: transparent;
+    border: 2px solid rgba(163, 88, 223, 0.6);
+}
+.left-menu .buttons a.green {
+    background-color: transparent;
+    border: 2px solid rgba(0, 202, 114, 0.6);
+}
+.left-menu .buttons a.orange {
+    background-color: transparent;
+    border: 2px solid rgba(253, 171, 61, 0.6);
+}
+.left-menu .buttons a.blue {
+    background-color: transparent;
+    border: 2px solid rgba(87, 155, 252, 0.6);
+}
+@media screen and (max-width: 1150px) {
+    .left-menu {
+        display: none;
+    }
+}
+a.a_style-1, a:visited.a_style-1, a:hover.a_style-1, a:active.a_style-1 {
+    position: relative;
+    color: #323338;
+    text-decoration: underline;
+    transition: .15s;
+    padding: 2px 5px 3px 5px;
+    box-sizing: content-box;
+}
+a.a_style-1 .border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: #323338 solid 0.5px;
+    border-radius: 5px;
+    opacity: 0;
+    display: inline-block;
+    transition: .15s;
+}
+a:hover.a_style-1 .border {
+    opacity: 1;
 }
 
 .alert {
     width: 80%;
-    padding: 15px;
-    border: #EEEEEE 1px solid;
+    padding: 10px;
+    border: #579BFC 2px solid;
+    background-color: rgba(87, 155, 252, 0.3);
     border-radius: 8px;
     text-align: justify;
-    
+    margin-bottom: 40px;
 }
+
+.buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-content: center;
+    transition: .15s;
+}
+
+.buttons a {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    color: #323338;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;;
+    font-weight: 500;
+    transition: .15s;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow: hidden;
+    position: relative;
+}
+.buttons a svg {
+    height: 80px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scale(0.8);
+}
+.buttons a.purple {
+    background-color: rgba(163, 88, 223, 0.6);
+}
+.buttons a.purple svg {
+    fill: rgb(163, 88, 223);
+}
+.buttons a.green {
+    background-color: rgba(0, 202, 114, 0.6);
+}
+.buttons a.green svg {
+    fill: rgb(0, 202, 114);
+}
+.buttons a.orange {
+    background-color: rgba(253, 171, 61, 0.6);
+}
+.buttons a.orange svg {
+    fill: rgb(253, 171, 61);
+}
+.buttons a.blue {
+    background-color: rgba(87, 155, 252, 0.6);
+}
+.buttons a.blue svg {
+    fill: rgb(87, 155, 252);
+}
+
+
 @media screen and (max-width: 550px) {
     .alert {
         width: 100%;
     }
 }
-
-.buttons {
-    text-align: center;
+@media screen and (max-width: 370px) {
+    .buttons {
+        grid-template-columns: repeat(auto-fill, 130px);
+    }
+    .buttons a {
+        font-size: 18px;
+        width: 130px;
+        height: 130px;
+    }
 }
 
-.buttons button {
-    margin: auto;
-    width: 220px;
-    height: 45px;
-    background-color: #2E2E2E;
-    border-radius: 8px;
-    border: #EEEEEE 1px solid;
-    color: #EEEEEE;
-    font-size: 16px;
-    font-family: Inter;
+.buttons a:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 24px;
     font-weight: 500;
-    transition: .15s;
+    padding: 0px 20px 10px 20px;
+    border-bottom: 2px solid gray;
 }
-.buttons button:hover {
-    box-shadow: 0 0 10px white;
+.subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.content p {
+    text-indent: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.content p:last-child {
+    margin-bottom: 0;
+}
+.content li {
+    margin: 0 0 15px 30px;
+    list-style: disc outside none;
+}
+.content li:last-child {
+    margin: 0 0 0 30px;
+}
+.content a, .content a:visited, .content a:hover, .content a:active {
+    --round: 4px;
+    --bgcolor: #2E2E2E;
+    color: #EEEEEE;
+    text-decoration: underline;
+    padding: 0 2px;
+    border-radius: 4px;
+    background:
+        radial-gradient(circle at var(--round) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at var(--round) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        linear-gradient(to left, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round))),
+        linear-gradient(to top, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round)));
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: .2s;
+}
+.content a:hover {
+    --round: 5px;
+    --bgcolor: #3D3D3D;
+    background:
+        radial-gradient(circle at var(--round) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at var(--round) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        linear-gradient(to left, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round))),
+        linear-gradient(to top, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round)));
+    padding: 2px 4px;
+    border-radius: 5;
 }
 
 footer {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    max-width: inherit;
+    bottom: 0;
+}
+footer a, footer a:visited, footer a:hover, footer a:active {
+    --round: 4px;
+    --bgcolor: #2E2E2E;
+    color: #EEEEEE;
+    text-decoration: underline;
+    padding: 0 2px;
+    border-radius: 4px;
+    background:
+        radial-gradient(circle at var(--round) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at var(--round) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        linear-gradient(to left, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round))),
+        linear-gradient(to top, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round)));
+    line-height: 180%;
+    transition: .2s;
+}
+footer a:hover {
+    --round: 5px;
+    --bgcolor: #3D3D3D;
+    background:
+        radial-gradient(circle at var(--round) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) var(--round), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at calc(100% - var(--round)) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        radial-gradient(circle at var(--round) calc(100% - var(--round)), var(--bgcolor) calc(var(--round) - 1px), transparent var(--round)),
+        linear-gradient(to left, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round))),
+        linear-gradient(to top, transparent var(--round), var(--bgcolor) var(--round), var(--bgcolor) calc(100% - var(--round)), transparent calc(100% - var(--round)));
+    padding: 2px 4px;
+}
+.btnBack_wrapper {
+    position: fixed;
     bottom: 0;
     width: 100%;
+    max-width: inherit;
+    margin-top: 50px;
 }
-
+.btnBack_wrapper a, .btnBack_wrapper a:visited, .btnBack_wrapper a:hover, .btnBack_wrapper a:active {
+    color: #EEEEEE;
+    text-decoration: none;
+    padding: 0;
+    border-radius: none;
+    background: none;
+}
 footer button {
     width: 100%;
     height: 50px;
-    background-color: #2E2E2E;
-    color: #EEEEEE;
+    background-color: #F5F6F8;
+    color: #323338;
     font-size: 16px;
     font-family: Inter;
     font-weight: 500;
     transition: .15s;
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 footer button:hover {
-    background-color: #3D3D3D;
+    background-color: #E6E9EF;
+}
+
+@media screen and (max-width: 1150px) {
+    footer button {
+        display: flex;
+    }
 }

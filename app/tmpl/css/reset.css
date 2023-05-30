@@ -1,7 +1,7 @@
 /*standart html&body styles*/
 html, body {
 	min-height: 100vh;
-	font-size: 14px;
+	font-size: 14px; 
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
